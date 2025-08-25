@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">reddit</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search Reddit">
+            </div>
+            <div class="user-menu">
+                <button class="login-btn">Log In</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Popular Communities</h3>
+                <ul class="communities-list">
+                    <li><a href="#">r/AskReddit</a></li>
+                    <li><a href="#">r/funny</a></li>
+                    <li><a href="#">r/gaming</a></li>
+                    <li><a href="#">r/pics</a></li>
+                    <li><a href="#">r/science</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Moderating</h3>
+                <ul class="communities-list">
+                    <li><a href="#">r/YourCommunity</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Posts Feed -->
+        <main class="content">
+            <div class="create-post">
+                <div class="post-form">
+                    <img class="user-avatar" src="https://www.redditstatic.com/avatars/avatar_default_02_A5A4A4.png" alt="User Avatar">
+                    <input type="text" placeholder="Create Post" class="post-input">
+                </div>
+            </div>
+
+            <div class="posts-container">
+                <!-- Sample Post -->
+                <div class="post" data-post-id="1">
+                    <div class="post-votes">
+                        <button class="vote-btn upvote" data-post-id="1">↑</button>
+                        <span class="vote-count" data-post-id="1">1.2k</span>
+                        <button class="vote-btn downvote" data-post-id="1">↓</button>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-header">
+                            <span class="post-community">r/funny</span>
+                            <span class="post-user">Posted by u/RedditUser</span>
+                            <span class="post-time">4 hours ago</span>
+                        </div>
+                        <h2 class="post-title">This is a sample post title</h2>
+                        <p class="post-text">This is the content of the post. It can be quite long and contain various information.</p>
+                        <div class="post-actions">
+                            <button class="action-btn comment-btn" data-post-id="1">💬 42 Comments</button>
+                            <button class="action-btn share-btn">↗️ Share</button>
+                            <button class="action-btn save-btn">💾 Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Another Sample Post -->
+                <div class="post" data-post-id="2">
+                    <div class="post-votes">
+                        <button class="vote-btn upvote" data-post-id="2">↑</button>
+                        <span class="vote-count" data-post-id="2">856</span>
+                        <button class="vote-btn downvote" data-post-id="2">↓</button>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-header">
+                            <span class="post-community">r/technology</span>
+                            <span class="post-user">Posted by u/TechEnthusiast</span>
+                            <span class="post-time">6 hours ago</span>
+                        </div>
+                        <h2 class="post-title">New technology breakthrough announced today</h2>
+                        <p class="post-text">Scientists have made a significant discovery that could change how we approach renewable energy.</p>
+                        <div class="post-actions">
+                            <button class="action-btn comment-btn" data-post-id="2">💬 128 Comments</button>
+                            <button class="action-btn share-btn">↗️ Share</button>
+                            <button class="action-btn save-btn">💾 Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
