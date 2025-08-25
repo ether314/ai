@@ -9,6 +9,13 @@ body {
     font-family: Arial, sans-serif;
     background-color: #dae0e6;
     color: #1c1c1c;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
 /* Header styles */
@@ -18,27 +25,23 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    padding: 8px 0;
 }
 
-.header-container {
+.header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 16px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.logo a {
-    font-size: 24px;
-    font-weight: bold;
+.logo h1 {
     color: #ff4500;
-    text-decoration: none;
+    font-size: 24px;
 }
 
 .search-bar {
     flex: 1;
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 16px;
 }
 
@@ -55,32 +58,30 @@ body {
     gap: 8px;
 }
 
-.login-btn, .signup-btn {
+.btn {
     padding: 6px 16px;
     border-radius: 32px;
     font-weight: bold;
     cursor: pointer;
+    border: none;
 }
 
-.login-btn {
+.login {
     background-color: #ffffff;
     color: #0079d3;
     border: 1px solid #0079d3;
 }
 
-.signup-btn {
+.signup {
     background-color: #0079d3;
     color: #ffffff;
-    border: none;
 }
 
-/* Main container */
-.main-container {
+/* Main content layout */
+.main-content {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 16px;
     gap: 24px;
+    padding: 20px 0;
 }
 
 /* Sidebar */
@@ -89,7 +90,8 @@ body {
     flex-shrink: 0;
 }
 
-.sidebar-section {
+/* Cards */
+.card {
     background-color: #ffffff;
     border-radius: 4px;
     padding: 12px;
@@ -97,39 +99,29 @@ body {
     border: 1px solid #ccccc9;
 }
 
-.sidebar-section h3 {
+.card h3 {
     font-size: 16px;
     margin-bottom: 8px;
     color: #1c1c1c;
 }
 
-.communities-list {
+.card ul {
     list-style: none;
 }
 
-.communities-list li {
+.card ul li {
     margin-bottom: 8px;
 }
 
-.communities-list a {
+.card ul li a {
     text-decoration: none;
     color: #0079d3;
     font-size: 14px;
 }
 
-/* Main content */
-.content {
-    flex: 1;
-    min-width: 0;
-}
-
 /* Create post */
 .create-post {
-    background-color: #ffffff;
-    border-radius: 4px;
     padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccccc9;
 }
 
 .post-form {
@@ -138,7 +130,7 @@ body {
     gap: 8px;
 }
 
-.user-avatar {
+.avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -153,29 +145,23 @@ body {
     cursor: pointer;
 }
 
-/* Posts container */
-.posts-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+/* Posts */
+.posts {
+    flex: 1;
 }
 
-/* Post styles */
 .post {
-    background-color: #ffffff;
-    border-radius: 4px;
     display: flex;
-    border: 1px solid #ccccc9;
+    padding: 8px;
 }
 
-.post-votes {
+.vote-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8px;
+    padding: 4px;
     width: 40px;
-    background-color: #f6f7f8;
-    border-right: 1px solid #ccccc9;
+    margin-right: 8px;
 }
 
 .vote-btn {
@@ -184,6 +170,7 @@ body {
     font-size: 18px;
     cursor: pointer;
     color: #878a8c;
+    padding: 2px;
 }
 
 .vote-btn:hover {
@@ -198,17 +185,16 @@ body {
 }
 
 .post-content {
-    padding: 12px;
     flex: 1;
 }
 
 .post-header {
     font-size: 12px;
     color: #878a8c;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
-.post-community {
+.community {
     color: #0079d3;
     font-weight: bold;
 }
@@ -224,7 +210,6 @@ body {
     font-size: 14px;
     color: #1c1c1c;
     margin-bottom: 8px;
-    line-height: 1.5;
 }
 
 .post-actions {
@@ -242,6 +227,7 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
+    padding: 4px;
 }
 
 .action-btn:hover {
@@ -254,7 +240,7 @@ body {
         display: none;
     }
     
-    .header-container {
+    .header .container {
         flex-wrap: wrap;
     }
     
